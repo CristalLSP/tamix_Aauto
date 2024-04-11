@@ -1,0 +1,13 @@
+ion-card {
+    margin: 20px;
+  }
+  
+  ion-item {
+    --ion-input-padding-end: 5px;
+  }
+  ion-content {
+    --background: url('../../assets/imagen/fondo2.jpg') no-repeat center center / cover;
+    z-index: 1; /* Asegúrate de que el contenido esté por encima del fondo */
+  }
+  
+  

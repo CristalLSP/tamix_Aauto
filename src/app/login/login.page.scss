@@ -1,0 +1,10 @@
+ion-content {
+    --background: url('../../assets/imagen/fondo2.jpg') no-repeat center center / cover;
+    z-index: 1; /* Asegúrate de que el contenido esté por encima del fondo */
+}
+  
+  .login-button {
+    --background: black; // Cambia el color de fondo del botón a negro
+    color: white; // Cambia el color del texto a blanco
+  }
+  

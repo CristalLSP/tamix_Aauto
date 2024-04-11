@@ -1,0 +1,32 @@
+<ion-content>
+    <ion-card>
+      <ion-card-header>
+        Boleto de Autotransporte
+      </ion-card-header>
+      <ion-card-content>
+        <div id="ticket-content" class="ticket-details">
+          <!-- Aquí se muestran los detalles del boleto -->
+          <p><strong>Nombre:</strong> {{ ticket.nombre }}</p>
+          <p><strong>Apellido Paterno:</strong> {{ ticket.apellidoPaterno }}</p>
+          <p><strong>Apellido Materno:</strong> {{ ticket.apellidoMaterno }}</p>
+          <p><strong>Destino:</strong> {{ ticket.destino }}</p>
+          <p><strong>Teléfono:</strong> {{ ticket.telefono }}</p>
+          <p><strong>Asientos Seleccionados:</strong></p>
+          <ul>
+            <li *ngFor="let seat of ticket.asientos">Asiento {{ seat }}</li>
+          </ul>
+          <p><strong>Total:</strong> ${{ ticket.total }}</p>
+          <p>Se ha guardado con éxito. Muchas gracias!!!</p>
+          <!-- Botón de salir -->
+          <ion-button (click)="goToLogin()">Salir</ion-button>
+          <!-- Botón de generar imagen -->
+          <ion-button (click)="generateTicketImage()">Generar Imagen</ion-button>
+          <!-- Botón de descargar imagen -->
+          <ion-button (click)="downloadTicketImage()">Descargar Imagen</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  
+  
+  

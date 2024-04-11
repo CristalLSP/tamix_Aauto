@@ -1,0 +1,50 @@
+.ticket-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.ticket {
+  color: red;
+}
+
+.error-input {
+  border-color: red;
+}
+
+.ticket-details {
+  font-family: Arial, sans-serif;
+  color: #333; /* Color de texto oscuro */
+  
+  p {
+    margin: 5px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 3px 0;
+  }
+}
+
+ion-card {
+  background-color: #f0f0f0; /* Color de fondo */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+ion-card-header {
+  background-color: #333; /* Color de fondo del encabezado */
+  color: #fff; /* Color de texto del encabezado */
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 10px 10px 0 0; /* Redondear solo las esquinas superiores */
+}
+
+ion-card-content {
+  padding: 10px;
+}

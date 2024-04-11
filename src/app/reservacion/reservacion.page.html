@@ -1,0 +1,59 @@
+<ion-content class="ion-padding">
+  <div class="header">
+    <img src="assets/iconof.png" alt="Iconof" class="iconof">
+    <h1 class="title">Reserva tu boleto</h1>
+  </div>
+
+  <ion-item [class.invalid]="showErrors && nombre.trim() === ''">
+    <ion-label>Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <p class="error-message" *ngIf="showErrors && nombre.trim() === ''">Por favor, introduce tu nombre</p>
+  
+  <ion-item [class.invalid]="showErrors && apellidoPaterno.trim() === ''">
+    <ion-label>Apellido Paterno</ion-label>
+    <ion-input type="text" [(ngModel)]="apellidoPaterno"></ion-input>
+  </ion-item>
+  <p class="error-message" *ngIf="showErrors && apellidoPaterno.trim() === ''">Por favor, introduce tu apellido paterno</p>
+  
+  <ion-item [class.invalid]="showErrors && apellidoMaterno.trim() === ''">
+    <ion-label>Apellido Materno</ion-label>
+    <ion-input type="text" [(ngModel)]="apellidoMaterno"></ion-input>
+  </ion-item>
+  <p class="error-message" *ngIf="showErrors && apellidoMaterno.trim() === ''">Por favor, introduce tu apellido materno</p>
+  
+    
+  <!-- Inserta la imagen de los asientos aquí -->
+  <div class="seat-image-container">
+    <img src="assets/imagen/aasientos.png" alt="Aasientosss" class="seat-image">
+  </div>
+  <!-- Fin de la inserción de la imagen de los asientos -->
+
+  <ion-item [class.invalid]="showErrors && !selectedDestino">
+    <ion-label>Destino</ion-label>
+    <ion-select [(ngModel)]="selectedDestino">
+      <ion-select-option *ngFor="let destino of destinos" [value]="destino">{{ destino }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <p class="error-message" *ngIf="showErrors && !selectedDestino">Por favor, selecciona un destino</p>
+
+  <ion-item [class.invalid]="showErrors && telefono.trim() === ''">
+    <ion-label>Número de teléfono</ion-label>
+    <ion-input type="tel" [(ngModel)]="telefono" clearInput></ion-input>
+  </ion-item>
+  <p class="error-message" *ngIf="showErrors && telefono.trim() === ''">Por favor, introduce un número de teléfono</p>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let seat of asientos" (click)="toggleSeat(seat.number)" [ngClass]="{
+        'seat-light': seat.available && !seat.selected,
+        'seat-success': seat.available && seat.selected,
+        'seat-danger': !seat.available
+      }">
+        Asiento {{ seat.number }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button expand="block" class="book-button" (click)="bookTicket()">Reservar</ion-button>
+</ion-content>
+

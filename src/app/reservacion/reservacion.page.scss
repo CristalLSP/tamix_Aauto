@@ -1,0 +1,100 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .bus-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .seat-list {
+    margin-top: 20px;
+  }
+  
+  .seat-item {
+    font-size: 16px;
+  }
+  
+  .book-button {
+    margin-top: 20px;
+    --background: rgb(13, 10, 223); /* Color de fondo personalizado */
+  }
+  .seat {
+    cursor: pointer;
+  }
+  
+  .seat-light {
+    background-color: #ddd; /* Color para asientos no disponibles */
+  }
+  
+  .seat-success {
+    background-color: #5cb85c; /* Color para asientos disponibles */
+  }
+  
+  .seat-danger {
+    background-color: #d9534f; /* Color para asientos seleccionados */
+  }
+  
+  .invalid ion-label {
+    color: red;
+  }
+  
+  .invalid ion-input {
+    --border-color: red;
+  }
+  
+  .invalid {
+    border: 1px solid red !important;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+ 
+  .error-input {
+    --highlight-color: #f53d3d; /* Color rojo de resaltado */
+  }
+  
+  .error-input input {
+    --highlight-color: #f53d3d; /* Color rojo de resaltado para el input */
+  }
+  
+  .error-input ion-input {
+    --highlight-color: #f53d3d; /* Color rojo de resaltado para ion-input */
+  }
+  
+  .error-input::part(native) {
+    --highlight-color: #f53d3d; /* Color rojo de resaltado para el input nativo */
+  }
+  
+  .error-input::part(placeholder) {
+    color: #f53d3d; /* Color rojo del placeholder */
+  }
+  
+  .error-input .input-wrapper {
+    border-color: var(--highlight-color) !important; /* Cambiar el color del borde */
+  }
+  
+  .error-input .alert-message {
+    color: var(--highlight-color); /* Cambiar el color del mensaje de alerta */
+  }
+  .error-input {
+    border-color: red;
+  }
+  .invalid ion-input {
+    --border-color: red;
+    --highlight-color-invalid: red;
+  }
+  
